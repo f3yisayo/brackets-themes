@@ -1,4 +1,3 @@
-brackets_themes
-===============
+#Brackets Themes
 
 Themes for Brackets

@@ -1,0 +1,24 @@
+{
+  "title": "Material Light",
+  "name": "ivanbarcia.material-light",
+  "description": "A light theme based on colors of Material Design.",
+  "version": "1.0.0",
+  "author": {
+	"name": "Iván Barcia",
+	"url": "https://github.com/ivarcia"
+  },
+  "homepage": "https://github.com/ivarcia/brackets_themes",
+  "repository": {
+        "type": "git",
+        "url": "https://github.com/ivarcia/brackets_themes.git"
+    },
+  "license": "MIT",
+  "engines": {
+    "brackets": ">=0.42.0"
+  },
+  "theme": {
+    "file": "theme.less",
+    "dark": false
+  },
+  "keywords": ["theme"]
+}

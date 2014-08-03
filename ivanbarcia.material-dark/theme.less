@@ -1,0 +1,123 @@
+// By Iván Barcia
+// https://github.com/ivarcia
+
+//Variables
+@color-1 : #e84e40; //Red 400
+@color-2 : #4db6ac; //Teal300
+@color-3 : #fff176; //Yellow300
+@color-4 : #42bd41; //Green300
+@color-5 : #ba68c8; //Purple300
+@color-6 : #ffa726; //Orange400
+
+@color-bg : #1a1a1a; //Gris900 (Color de fondo)
+@color-cm : #595959; //Gris650 (Comentarios)
+@color-sl : #404040; //Gris 750 (Color de fondo de selección)
+@color-fg : #ffffff; //Blanco (Color de contraste)
+
+/* Code Styling */
+.CodeMirror, .CodeMirror-scroll {
+    background-color: @color-bg; //Fondo principal
+    color: @color-fg; // Corchetes, puntos y coma, etc
+}
+
+.CodeMirror-focused .CodeMirror-activeline-background {
+    background: @color-sl; //Color de fondo con la opción "resaltar linea actual"
+}
+
+&.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
+    box-shadow: inset 15px 0 0 0 #000;
+}
+
+.CodeMirror-focused .CodeMirror-activeline {
+    .CodeMirror-gutter-elt {
+        background: @color-sl; //Color de fondo de los numeros de linea, con la opción "resaltar linea actual"
+        color: #fff; //Color del texto de los numeros de linea, con la opción "resaltar linea actual"
+    }
+    .inline-widget .CodeMirror-gutter-elt {
+        color: #767676;
+    }
+}
+
+.cm-atom {color: @color-fg;} //propiedades en css
+.cm-string {color: @color-3;} //propiedades en javascript y html
+.cm-string-2 {color: @color-3;}
+.cm-hr {color: @color-3;}
+
+.cm-number{color: @color-5;} //Numeros en javascript y en css
+.cm-attribute{color: @color-2;} //Atributos en html
+.cm-plus {color: @color-2;}
+
+.cm-def {color: @color-6;} //variables javascript
+.cm-property {color: @color-2;} //propiedades less y eventos javascript
+
+.cm-operator {color: @color-1;} //Operadores javascript
+.cm-meta {color: @color-2;} //Prefijos css (-webkit etc)
+.cm-bracket {color: @color-2;}
+
+.cm-variable {color: @color-fg;} //Variables por defecto, javascript.
+.cm-variable-2 {color: @color-5;} //Variables less , y uso de variables en Javascript
+.cm-variable-3 {color: @color-6;} //Modificadores css (:hover, :last-child, etc)
+
+.cm-comment {color: @color-cm;} //Comentarios
+.cm-error {color: red;} //Errores
+.cm-minus {color: blue;}
+.cm-header {color: @color-1;}
+.cm-link {color: red; text-decoration: none;}
+.cm-rangeinfo {color: blue;}
+
+.cm-keyword {color: @color-1;}  //Palabras clave (colores css, function y if en javascript
+.cm-qualifier {color: @color-4;} //clases en css
+.cm-builtin{color: @color-4;} //id en css
+.cm-tag {color: @color-1;} //elementos en css y html
+.cm-quote {color: @color-1;}
+
+/* Extra CSS */
+.CodeMirror.find-highlighting div.CodeMirror-selected,
+.CodeMirror .CodeMirror.find-highlighting div.CodeMirror-selected {
+    background: green;
+}
+
+.CodeMirror-cursor {
+    border-left: 1px solid @color-fg !important; //Cursor de introducción de texto
+}
+
+.CodeMirror-gutters {
+    background-color: @color-bg; //Color de fondo de los números de linea
+    border-right: none; //Borde de los numeros de linea
+}
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+    color: #fff;
+}
+
+.CodeMirror .CodeMirror-selected {
+    background: #808080;
+}
+.CodeMirror-focused .CodeMirror-selected {
+    background: @color-sl; //Color de fondo de la selección
+}
+
+.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
+    /* Ensure visibility against gray inline editor background */
+    background-color: @color-sl; //Color de fondo del elemento seleccionado
+}
+
+.CodeMirror-matchingbracket, .CodeMirror-matchingtag .CodeMirror-scroll {
+    background-color: @color-sl; //Color de fondo de los corchetes seleccionados
+    color: @color-fg !important; //Color del corchete seleccionado
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-left: none !important;
+    border-bottom: 1px solid #fff;
+}
+
+/* Non-editor styling */
+#image-holder,
+#not-editor {
+    background-color: @color-bg;
+}
+
+#image-holder {
+    color: @color-fg;
+}
