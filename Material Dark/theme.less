@@ -121,3 +121,54 @@
 #image-holder {
     color: @color-fg;
 }
+
+/* Code Fold Extension Theming */
+
+@font-size: 21px;
+@color2: #00838f;
+
+.CodeMirror-foldgutter {
+	&-open:after {
+    	content: "\2296";
+		font-size: @font-size;
+		font-weight: 900;
+		color: @color2;
+	}
+	&-folded:after {
+    	content: "\2295";
+		font-size: @font-size;
+		font-weight: 900;
+		color: @color2;
+	}
+}
+
+.CodeMirror-foldgutter,
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded,
+.CodeMirror-foldgutter-blank {
+	cursor: pointer;
+	margin-left: 7px;
+    width: @font-size;
+    line-height: 100%;
+	font-weight: 800;
+}
+
+.CodeMirror-gutter-elt {
+    height: 100% !important;
+}
+
+.CodeMirror-foldmarker {
+	font-weight: 700;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius: 0px;
+    border:0px;
+	color: darken(@color2, 2%);
+	background-color: transparent;
+    
+    &:after {
+        content: "...";   
+    }
+}
